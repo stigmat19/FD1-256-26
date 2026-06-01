@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h3::before {
+            content: '--------- ';
+        }
+        
+        h3::after {
+            content: ' ---------';
+        }
+        
+        ul {
+            counter-reset: car -5;
+        }
+        
+        li::before {
+            counter-increment: car;
+            content: 'Car ' counter(car) ': ';
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3 data-sdsdsdsd="Hello">Hello1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cumque vel ipsam debitis, corrupti inventore magni labore voluptas aperiam quisquam et recusandae dolore nam autem quam omnis? Vero, sequi exercitationem?</p>
+
+
+    <h3>Hello2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cumque vel ipsam debitis, corrupti inventore magni labore voluptas aperiam quisquam et recusandae dolore nam autem quam omnis? Vero, sequi exercitationem?</p>
+
+
+    <h3>Hello3</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cumque vel ipsam debitis, corrupti inventore magni labore voluptas aperiam quisquam et recusandae dolore nam autem quam omnis? Vero, sequi exercitationem?</p>
+
+    <ul>
+        <li>Bmw</li>
+        <li>Mers</li>
+        <li>Audi</li>
+        <li>Bmw</li>
+        <li>Mers</li>
+        <li>Audi</li>
+        <li>Bmw</li>
+        <li>Mers</li>
+        <li>Audi</li>
+        <li>Bmw</li>
+        <li>Mers</li>
+        <li>Audi</li>
+    </ul>
+
+</body>
+
+</html>

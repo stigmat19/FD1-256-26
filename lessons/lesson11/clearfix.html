@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .header,
+        .footer {
+            height: 50px;
+            background-color: aqua;
+        }
+        
+        .menu {
+            width: 200px;
+            height: 300px;
+            background-color: red;
+            float: left;
+        }
+        
+        .banner {
+            width: 200px;
+            height: 300px;
+            background-color: blue;
+            float: right;
+        }
+        
+        .content {
+            background-color: blueviolet;
+        }
+        
+        .wrap {
+            background-color: cadetblue;
+        }
+        
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <a href="#aaa"></a>
+
+    <a name="aaa"></a>
+
+    <div id="aaa" class="header">Header</div>
+    <div class="wrap clearfix">
+        <div class="menu">menu</div>
+        <div class="banner">banner</div>
+        <div class="content">content</div>
+    </div>
+    <div class="footer"></div>
+
+</body>
+
+</html>
