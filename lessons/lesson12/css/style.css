@@ -1,0 +1,17 @@
+@import "main.css";
+@import "media1000.css";
+@import "media800.css";
+@import "media500and700.css";
+@import "print.css" print;
+
+/* @media all and (orientation: landscape) {
+    body {
+        background-color: red;
+    }
+}
+
+@media all and (orientation: portrait) {
+    body {
+        background-color: blue;
+    }
+} */

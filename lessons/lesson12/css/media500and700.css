@@ -1,0 +1,6 @@
+@media all and (min-width: 500) and (max-width:700px),
+print {
+    div {
+        background: url();
+    }
+}
