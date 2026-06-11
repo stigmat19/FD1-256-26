@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 10000px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="https://fe.it-academy.by/TestForm.php" method="post" enctype="multipart/form-data">
+        <input type="text" name="firstName" maxlength="10" placeholder="test" value="Fio"> <br>
+        <input type="text" name="lastName" autofocus> <br>
+        <input type="hidden" value="type1" name="type">
+
+        <input type="password" name="pass"><br>
+
+        <hr>
+        <input type="checkbox" name="check[]" value="yes1">
+        <input type="checkbox" name="check[]" value="yes2">
+        <input type="checkbox" name="check[]" value="yes3">
+        <input type="checkbox" name="check[]" value="yes4" checked>
+        <input type="checkbox" name="check[]" value="yes5">
+        <input type="checkbox" name="check[]" value="yes6">
+
+        <hr> label1
+        <input type="radio" name="radio" value="yes1"> label1
+        <input type="radio" name="radio" value="yes2" checked> label1
+        <input type="radio" name="radio" value="yes3">
+        <hr>
+
+        <input type="radio" name="radio1" value="yes4" checked>
+        <input type="radio" name="radio1" value="yes5">
+        <input type="radio" name="radio1" value="yes6">
+        <hr>
+        <input type="file" name="file">
+        <hr>
+        <input type="submit" value="blabla" disabled>
+        <input type="reset">
+
+        <button type="submit">click</button>
+    </form>
+
+    <form action="https://fe.it-academy.by/TestForm.php">
+        <input type="text" name="firstName" maxlength="10" placeholder="test" value="Fio"> <br>
+        <label for="aaa">lastName</label> <br>
+        <input type="hidden" value="type2" name="type">
+
+        <textarea name="text">text</textarea>
+        <br>
+        <select name="animalkind[]" multiple>
+            <option value="7">кошка</option>
+            <option value="5" selected>собака</option>
+            <option value="8">попугай</option>
+            <option value="9" selected>тушкан</option>
+        </select>
+        <input id="aaa" type="text" name="lastName">
+        <input type="submit">
+    </form>
+
+
+    <form style="width: 200px;" action="https://fe.it-academy.by/TestForm.php">
+        <fieldset>
+            <legend>sdsdsd</legend>
+            <input type="text" name="asasa"> <input type="submit">
+            <label><input type="radio" name="aaa" value="google">google</label>
+            <label><input type="radio" name="aaa" value="on_site">on site</label>
+        </fieldset>
+    </form>
+    <!-- CRUD
+    Rest Api
+    https://fe.it-academy.by/user.php
+
+    https://fe.it-academy.by/createUser.php
+    https://fe.it-academy.by/readUser.php
+    https://fe.it-academy.by/updateUser.php
+    https://fe.it-academy.by/deleteUser.php
+    https://fe.it-academy.by/TestForm.php   
+    https://fe.it-academy.by/TestForm.php?firstName=asasas&lastName=fdfdfd -->
+    <!-- https://ab.onliner.by/bmw/x5?year%5Bfrom%5D=2020&year%5Bto%5D=2026&body_type%5B0%5D=suv&engine_type%5B0%5D=diesel -->
+</body>
+
+</html>

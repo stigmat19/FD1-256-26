@@ -3,6 +3,10 @@
 @import "media800.css";
 @import "media500and700.css";
 @import "print.css" print;
+.a {
+    background-image: url(../img/img1.png);
+}
+
 
 /* @media all and (orientation: landscape) {
     body {
