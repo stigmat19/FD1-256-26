@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input {
+            width: 10px;
+            height: 10px;
+            display: none;
+        }
+        
+        label {
+            width: 34px;
+            height: 34px;
+            background-image: url(check-cross-flat-boxes_78370-638.avif);
+            background-size: 80px;
+            display: block;
+            background-position: -3px -11px;
+        }
+        
+        input:checked+label {
+            background-position: -39px -11px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <label for="check"></label>
+
+</body>
+
+</html>
