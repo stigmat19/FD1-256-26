@@ -1,0 +1,9 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" height="189" width="153" y="124.5" x="184" stroke="#000" fill="#bf5f00"/>
+  <ellipse ry="119" rx="204" id="svg_2" cy="343.5" cx="491" stroke="#000" fill="#7fff00"/>
+  <ellipse ry="0.5" id="svg_3" cy="160" cx="287" stroke="#000" fill="#7fff00"/>
+ </g>
+</svg>

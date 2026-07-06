@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .item {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(255, 170, 170);
+            padding: 20px;
+            /* border-radius: 24px 36px 31px 22px;
+            margin: 100px;
+            padding: 30px;
+            text-shadow: 1px -3px 10px #00CE27;
+            box-shadow: 11px -9px 12px -3px #0047FF;
+            transform: rotate(37deg) skew(26deg, 15deg) translateY(100px); */
+        }
+
+        @keyframes MyAnimation3a {
+            from {
+                background-color: cyan;
+            }
+
+            to {
+                background-color: magenta;
+            }
+        }
+
+        @keyframes MyAnimation3b {
+            from {
+                color: black;
+            }
+
+            to {
+                color: white;
+            }
+        }
+
+        .ex3 {
+            background-color: cyan;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .ex3:hover {
+            animation:
+                MyAnimation3a 5s infinite,
+                MyAnimation3b 1s infinite;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p class='ex3'>
+        CSS3 умеет делать сразу несколько
+        <br>анимаций перехода
+    </p>
+
+    <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, laborum laudantium facere non quibusdam atque, ab
+        dolores rerum nam natus quos molestias ut libero alias neque magnam voluptates deserunt ipsum.
+    </div>
+
+</body>
+
+</html>
