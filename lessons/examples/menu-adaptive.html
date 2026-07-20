@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        li {
+            list-style-type: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .header {
+            background-color: aqua;
+            position: fixed;
+            height: 58px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .menu {
+            display: flex;
+            justify-content: center;
+            transition: 0.5s;
+        }
+        
+        .menu li a {
+            padding: 20px;
+            display: inline-block;
+        }
+        
+        .menu li a:hover {
+            background: red;
+        }
+        
+        .open,
+        .close {
+            display: none;
+            width: 100px;
+            height: 20px;
+        }
+        
+        .menu-controls {
+            display: none;
+        }
+        
+        .shadow {
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100vw;
+            height: 100vh;
+            transition: 0.5s;
+            position: fixed;
+            left: 100vw;
+        }
+        
+        .visible {
+            display: block;
+            opacity: 1;
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        .block {
+            width: 100vw;
+            height: calc(100vh - 58px);
+        }
+        
+        .block:first-child {
+            background-color: red;
+        }
+        
+        .block:nth-child(2) {
+            background-color: green;
+        }
+        
+        .block:nth-child(3) {
+            background-color: violet;
+        }
+        
+        .block:nth-child(4) {
+            background-color: blue;
+        }
+        
+        .block:last-child {
+            background-color: rgb(246, 255, 0);
+        }
+        
+        @media all and (max-width: 800px) {
+            .menu-controls {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding-right: 20px;
+                height: 100%;
+            }
+            .menu {
+                flex-direction: column;
+                width: 160px;
+                background: #2cff00;
+                position: absolute;
+                right: -160px;
+                top: 58px;
+            }
+            .menu li a {
+                display: flex;
+            }
+            .menu-controls .open {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="menu-controls"><button class="open" onclick="openHandler()">open</button> <button class="close" onclick="closeHandler()">close</button></div>
+
+        <div class="shadow"></div>
+
+        <ul class="menu">
+            <li><a href="#block1">Главная</a></li>
+            <li><a href="#block2">Услуги и цены</a></li>
+            <li><a href="#block3">Чек-ап</a></li>
+            <li><a href="#block4">Врачи</a></li>
+            <li><a href="#block5">Контакты</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <div class="block" id="block1"></div>
+        <div class="block" id="block2"></div>
+        <div class="block" id="block3"></div>
+        <div class="block" id="block4"></div>
+        <div class="block" id="block5"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+
+                var targetId = $(this).attr('href');
+                var targetOffset = $(targetId).offset().top;
+
+                $('html, body').animate({
+                    scrollTop: targetOffset
+                }, 800);
+            });
+        });
+
+        var menu = document.querySelector('.menu');
+        var openBtn = document.querySelector('.open');
+        var closeBtn = document.querySelector('.close');
+        var shadow = document.querySelector('.shadow');
+
+
+        function openHandler() {
+            menu.style.right = 0;
+            openBtn.className = 'hide';
+            shadow.className += ' visible';
+            shadow.style.left = 0;
+            closeBtn.className = 'visible';
+
+        }
+
+        function closeHandler() {
+            menu.style.right = -160 + 'px';
+            openBtn.className = 'visible';
+            shadow.className = 'shadow';
+            shadow.style.left = '100vw';
+            closeBtn.className = 'hide';
+        }
+    </script>
+
+
+
+</body>
+
+</html>

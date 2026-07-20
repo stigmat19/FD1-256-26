@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="owl.carousel.css">
+    <style>
+        .item {
+            height: 200px;
+            background-color: blue;
+        }
+        
+        #carousel1 .owl-dot {
+            width: 10px;
+            height: 10px;
+            background: red;
+            border-radius: 50%;
+            margin: 10px;
+        }
+        
+        #carousel1 .owl-dots {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #carousel2 .owl-dot {
+            width: 10px;
+            height: 10px;
+            background: green;
+            border-radius: 50%;
+            margin: 10px;
+        }
+        
+        #carousel2 .owl-dots {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="carousel1" class="owl-carousel owl-theme">
+        <div class="item">
+            <h4>1</h4>
+        </div>
+        <div class="item">
+            <h4>2</h4>
+        </div>
+        <div class="item">
+            <h4>3</h4>
+        </div>
+        <div class="item">
+            <h4>4</h4>
+        </div>
+        <div class="item">
+            <h4>5</h4>
+        </div>
+        <div class="item">
+            <h4>6</h4>
+        </div>
+        <div class="item">
+            <h4>7</h4>
+        </div>
+        <div class="item">
+            <h4>8</h4>
+        </div>
+        <div class="item">
+            <h4>9</h4>
+        </div>
+        <div class="item">
+            <h4>10</h4>
+        </div>
+        <div class="item">
+            <h4>11</h4>
+        </div>
+        <div class="item">
+            <h4>12</h4>
+        </div>
+    </div>
+
+    <div id="carousel2" class="owl-carousel owl-theme">
+        <div class="item">
+            <h4>1</h4>
+        </div>
+        <div class="item">
+            <h4>2</h4>
+        </div>
+        <div class="item">
+            <h4>3</h4>
+        </div>
+        <div class="item">
+            <h4>4</h4>
+        </div>
+        <div class="item">
+            <h4>5</h4>
+        </div>
+        <div class="item">
+            <h4>6</h4>
+        </div>
+        <div class="item">
+            <h4>7</h4>
+        </div>
+        <div class="item">
+            <h4>8</h4>
+        </div>
+        <div class="item">
+            <h4>9</h4>
+        </div>
+        <div class="item">
+            <h4>10</h4>
+        </div>
+        <div class="item">
+            <h4>11</h4>
+        </div>
+        <div class="item">
+            <h4>12</h4>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#carousel1").owlCarousel({
+                margin: 50,
+                items: 3,
+                dots: true
+            });
+
+            $("#carousel2").owlCarousel({
+                margin: 50,
+                items: 5,
+                dots: true
+            });
+        });
+    </script>
+</body>
+
+</html>
